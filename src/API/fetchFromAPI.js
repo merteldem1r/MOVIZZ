@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const apiKey = import.meta.env.VITE_API_KEY;
+console.log(import.meta.env);
 
 export function fetchFromApi(url, page) {
   const options = {
