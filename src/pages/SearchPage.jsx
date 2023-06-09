@@ -32,7 +32,7 @@ const SearchPage = () => {
 
         {medias.map(media => (
           <div key={media.id} className="md:max-w-[200px] max-w-[150px]">
-            <MediaCard media={media} type="movie" />
+            <MediaCard media={media} />
           </div>
         ))}
       </div>
