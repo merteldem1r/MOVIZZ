@@ -11,16 +11,23 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef();
 
+  const closeNavMenu = () => setIsOpen(false);
+
   useEffect(() => {
     setIsOpen(false);
+
+    window.addEventListener('click', closeNavMenu)
+
+    return () => {
+      window.removeEventListener('click', closeNavMenu);
+    }
   }, [location])
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-  }, [isOpen])
-
   return (
-    <header className="w-full flex items-center py-4 sticky top-0 bg-mainBlue shadow-header z-50">
+    <header
+      onClick={e => e.stopPropagation()}
+      className="w-full flex items-center py-4 sticky top-0 bg-mainBlue shadow-header z-50"
+    >
       <div className="container flex justify-between">
         <Link to="/" className="font-bold mr-4 text-4xl">
           MOVI<span className="text-[#93C5FD]">ZZ</span>

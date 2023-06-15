@@ -16,7 +16,7 @@ const MediaCast = ({ url }) => {
     <section className="container flex flex-col gap-5 mt-12">
       <h3 className="lg:text-3xl md:text-2xl">Media Cast</h3>
 
-      <div className="flex gap-4 pb-3 overflow-x-scroll scrollSlider">
+      <div className="flex gap-4 sm:pb-3 overflow-x-scroll scrollSlider">
         {isLoading && <Loader />}
         {cast.map(actor => (
           <CastCard key={actor.cast_id} actor={actor} />

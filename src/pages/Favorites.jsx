@@ -74,7 +74,7 @@ const Favorites = () => {
             Delete All
           </button>
           <MyModal visible={isModal} setVisible={setIsModal}>
-            <div className="flex flex-col gap-4 items-center rounded-sm bg-mainBlue p-10">
+            <div className="flex flex-col gap-4 items-center rounded-sm bg-mainBlue md:p-10 p-5">
               <DeleteForeverIcon sx={{ fontSize: 50 }} />
               <h3>Are you sure to delete all {favorites.length} media?</h3>
               <div className="flex gap-3">

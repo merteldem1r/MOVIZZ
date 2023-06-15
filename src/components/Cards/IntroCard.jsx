@@ -12,9 +12,10 @@ const IntroCard = ({ media }) => {
     <div className="relative max-h-[60vh] cursor-grab">
       <div className="">
         <div className="overlay-film-cover"></div>
-        <img className="block w-full" src={imageURL} alt="" />
+        <img className="block w-full min-h-[27vh] object-cover" src={imageURL} alt="" />
       </div>
-      <div className="flex flex-col items-start sm:gap-3 gap-1 absolute max-w-[500px] top-[50%] left-[3vw] translate-y-[-50%]">
+      <div
+        className="flex flex-col items-start sm:gap-3 gap-1 absolute max-w-[500px] top-[50%] left-[3vw] translate-y-[-50%]">
         <h1 className="font-bold lg:text-3xl md:text-2xl sm:text-lg text-md">{media.title}</h1>
         <div className="md:text-md sm:text-sm text-xs">{mediaOverview}</div>
         <Link

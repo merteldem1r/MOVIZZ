@@ -16,13 +16,13 @@ const Intro = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 1250,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
     autoplaySpeed: 2500,
-    cssEase: "linear",
+    cssEase: "ease",
   };
 
   return (

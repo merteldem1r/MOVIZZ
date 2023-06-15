@@ -8,16 +8,16 @@ const CastCard = ({ actor }) => {
     : '/img/no-image.png';
 
   return (
-    <div className="relative min-w-[150px] max-w-[150px] flex flex-col gap-2">
+    <div className="relative pb-2 md:pb-6 flex flex-col gap-2">
       <img
         onClick={() => setIsModal(true)}
-        className="block w-full rounded-md opacity-95 cursor-pointer hover:opacity-60 transition-all"
+        className="max-w-[125px] sm:max-w-[150px] rounded-md opacity-95 cursor-pointer hover:opacity-60 transition-all"
         src={imageURL}
         alt="Actor"
       />
       <MyModal visible={isModal} setVisible={setIsModal}>
         <img
-          className="w-full rounded-md"
+          className="block md:w-full sm:w-4/5 w-3/5 rounded-md"
           src={imageURL}
           alt="actor"
         />

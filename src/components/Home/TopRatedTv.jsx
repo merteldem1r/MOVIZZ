@@ -15,7 +15,7 @@ const TopRatedTv = () => {
   }, [page])
 
   return (
-    <section className="container flex flex-col gap-5 my-8">
+    <section className="container flex flex-col gap-5 my-8 md:mb-12">
       <div className="flex justify-between items-center">
         <h3 className="lg:text-3xl md:text-2xl text-l">Top Rated TV Shows</h3>
 

@@ -23,8 +23,7 @@ const MediaVideos = ({ url }) => {
             <ReactPlayer
               key={video.key}
               url={`https://www.youtube.com/watch?v=${video.key}`}
-              width="575px"
-              className="react-player min-w-[575px]"
+              className="react-player md:min-w-[575px] sm:min-w-[325px] min-w-[300px] max-h-[175px] sm:max-h-[200px] md:max-h-[350px]"
               controls
             />
           )
