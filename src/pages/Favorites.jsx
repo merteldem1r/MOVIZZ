@@ -13,6 +13,7 @@ const Favorites = () => {
 
   return (
     <section className="flex justify-center container mt-8">
+      {/* no favorites */}
       {favorites.length === 0 &&
         <div className="flex flex-col gap-3 items-center mt-[15vh]">
           <StarHalfIcon sx={{ fontSize: 50 }} />
@@ -33,14 +34,16 @@ const Favorites = () => {
           </div>
         </div>
       }
+
+      {/* favorites */}
       {favorites.length > 0 &&
         <div className="flex flex-col items-center gap-5">
           <h3 className="mb-3 lg:text-3xl md:text-2xl text-xl">Favorite Medias</h3>
-          <div className="flex justify-center flex-wrap gap-3">
+          <div className="flex justify-center flex-wrap gap-4">
             {favorites.map(media => (
               <div
                 key={media.url}
-                className="md:max-w-[200px] max-w-[125px]">
+                className="md:max-w-[175px] max-w-[125px]">
                 <Link to={media.url} className="hover:opacity-70 transition-all">
                   <img
                     className="w-full rounded-md"
@@ -63,6 +66,7 @@ const Favorites = () => {
               </div>
             ))}
           </div>
+
           <button
             onClick={() =>
               favorites.length >= 3
@@ -73,16 +77,21 @@ const Favorites = () => {
           >
             Delete All
           </button>
+
+          {/* delete favorites modal */}
           <MyModal visible={isModal} setVisible={setIsModal}>
             <div className="flex flex-col gap-4 items-center rounded-sm bg-mainBlue md:p-10 p-5">
               <DeleteForeverIcon sx={{ fontSize: 50 }} />
               <h3>Are you sure to delete all {favorites.length} media?</h3>
               <div className="flex gap-3">
                 <button
-                  onClick={() => dispatch(clearAllFavorites())}
+                  onClick={() => {
+                    setIsModal(false);
+                    dispatch(clearAllFavorites());
+                  }}
                   className="bg-[#0f0f1c] px-10 py-2 rounded-sm self-center hover:scale-[1.05] transition-all"
                 >
-                  Delete All
+                  Delete
                 </button>
                 <button
                   onClick={() => setIsModal(false)}

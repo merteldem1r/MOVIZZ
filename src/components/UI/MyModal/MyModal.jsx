@@ -4,6 +4,10 @@ const MyModal = ({ children, visible, setVisible }) => {
 
   useEffect(() => {
     document.body.style.overflow = visible ? 'hidden' : 'auto';
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    }
   }, [visible])
 
   return (
