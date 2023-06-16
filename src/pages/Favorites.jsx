@@ -78,7 +78,6 @@ const Favorites = () => {
             Delete All
           </button>
 
-          {/* delete favorites modal */}
           <MyModal visible={isModal} setVisible={setIsModal}>
             <div className="flex flex-col gap-4 items-center rounded-sm bg-mainBlue md:p-10 p-5">
               <DeleteForeverIcon sx={{ fontSize: 50 }} />
