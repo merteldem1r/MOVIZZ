@@ -1,5 +1,5 @@
 # MOVIZZ React App
-Movizz is a React App where u can search, save and see detailed information about movies and tv shows. This application contain many real world web application features such as state management with redux toolkit, react router, search params, axios, dynamic pagination, modals etc.
+Movizz is a React App where u can search, save and see detailed information about movies and tv shows.
 
 https://movizz.vercel.app/
 
