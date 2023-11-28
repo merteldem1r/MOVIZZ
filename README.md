@@ -1,5 +1,5 @@
 # MOVIZZ React App
-Movizz is a React App where u can search, save and see detailed information about movies and tv shows.
+Movizz is a React App where you can search, save and see detailed information about movies and tv shows.
 
 https://movizz.vercel.app/
 
